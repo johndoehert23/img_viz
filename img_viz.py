@@ -3,7 +3,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-def plot_Unet_pred(folder_path, predictions):
+def process_Unet_pred(folder_path, predictions):
   
     predictions = np.squeeze(predictions, axis=0)
     rescaled_predictions = (predictions * 255).astype(np.uint8)
