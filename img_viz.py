@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 
 def plot_Unet_pred(folder_path, predictions):
   
-  predictions = np.squeeze(predictions, axis=0)
-  rescaled_predictions = (predictions * 255).astype(np.uint8)
-  min_val = np.min(rescaled_predictions)
-  max_val = np.max(rescaled_predictions)
-  stretched_predictions = ((rescaled_predictions - min_val) / (max_val - min_val) * 255).astype(np.uint8)
-  flattened_predictions = stretched_predictions.flatten()
+    predictions = np.squeeze(predictions, axis=0)
+    rescaled_predictions = (predictions * 255).astype(np.uint8)
+    min_val = np.min(rescaled_predictions)
+    max_val = np.max(rescaled_predictions)
+    stretched_predictions = ((rescaled_predictions - min_val) / (max_val - min_val) * 255).astype(np.uint8)
+    flattened_predictions = stretched_predictions.flatten()
 
     # Create a list to hold the images
     images = []
